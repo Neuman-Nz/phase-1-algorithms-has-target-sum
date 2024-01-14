@@ -1,6 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for (i = 0;i < array.length;i++) {
+    var first = array[i];
+    for (j = i + 1;j < array.length;j++) {
+        var second = array[j];
+
+        if ((first + second) == target) {
+            return true;
+        }
+    }
+
 }
+return false;
+}
+hasTargetSum([3, 8, 12, 4, 11, 7], 10)
+
 
 /* 
   Write the Big O time complexity of your function here
